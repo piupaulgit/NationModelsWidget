@@ -10,6 +10,10 @@ router.get("/getRecord", (req, res) => {
   res.status(200).send(data);
 });
 
+router.get("/", (req, res) => {
+  res.status(200).send("api running");
+});
+
 app.use("/", router);
 
 app.listen("3300", () => {
