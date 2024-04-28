@@ -50,7 +50,7 @@ const NationMedalsWidget: React.FC<NationMedalsWidgetProps> = (
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3300/getRecord");
+        const response = await fetch(`${window.location.origin}/getRecord`);
         const jsonData: INationMedals[] = await response.json();
         const modifiedData = jsonData.map((obj: INationMedals) => {
           return Object.assign({}, obj, {
